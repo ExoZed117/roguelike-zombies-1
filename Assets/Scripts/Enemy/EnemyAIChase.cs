@@ -42,7 +42,5 @@ public class EnemyAIChase : MonoBehaviour, IEnemy
     {
         if (target != null && target.TryGetComponent<IDamageable>(out var dmg)) dmg.TakeDamage(damage);
     }
-
-    // Simple hook de muerte
     void OnDeath() { gameObject.SetActive(false); }
 }
